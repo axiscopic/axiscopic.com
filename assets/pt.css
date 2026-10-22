@@ -1,0 +1,116 @@
+/* AxisCopic · molde PT — «o arquivo aberto na mesa».
+   Estudo: ESTUDO_PAGINAS_PT_EN_2026-10-16.md §2. A barreira no Brasil é «é golpe?»:
+   garantia grande, Hotmart e Pix à vista, quem está por trás, barra fixa no celular. */
+
+/* faixa de confiança: aparece perto de todo botão de compra */
+.confianca { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 14px; font: 500 13px/1.4 var(--texto); color: #CFC6B5; }
+.confianca span { display: inline-flex; align-items: center; gap: 7px; }
+.confianca span::before { content: ""; width: 14px; height: 14px; flex: none; border-radius: 50%; background: rgba(143, 209, 158, .18); box-shadow: inset 0 0 0 1.5px #8FD19E; }
+.papel .confianca { color: var(--tinta-2); }
+
+.faixa-confianca { background: var(--noir-3); border-bottom: 1px solid var(--linha); }
+.faixa-confianca .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; padding-top: 14px; padding-bottom: 14px; font: 500 12px/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--cinza); }
+.faixa-confianca b { color: var(--papel); font-weight: 600; }
+
+/* o que você NÃO vai encontrar aqui */
+.nao-tem { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.nao-tem div { border: 1px solid var(--linha-papel); background: #FBF7EE; padding: 22px; display: grid; gap: 10px; align-content: start; border-radius: 4px; }
+.nao-tem b { font: 800 19px/1.25 var(--display); }
+.nao-tem b::before { content: "✕"; display: block; font: 700 18px/1 var(--texto); color: #B23A2B; margin-bottom: 12px; }
+.nao-tem p { color: var(--tinta-2); font-size: 15px; }
+
+/* selo de garantia */
+.selo { position: relative; width: 196px; height: 196px; flex: none; border-radius: 50%; display: grid; place-items: center; text-align: center;
+  background: radial-gradient(circle, var(--noir-2) 63%, transparent 64%), conic-gradient(var(--ouro) 0 100%);
+  box-shadow: 0 0 0 6px var(--noir), 0 0 0 7px rgba(255, 191, 0, .4); }
+.selo b { display: block; font: 900 64px/.9 var(--display); color: var(--ouro); }
+.selo small { display: block; font: 600 10px/1.3 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--papel); margin-top: 6px; }
+.selo em { display: block; font: 400 10px/1.3 var(--mono); font-style: normal; color: var(--cinza); margin-top: 4px; }
+
+/* caixa de preço */
+.caixa-preco { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 28px 40px; align-items: center; background: var(--noir-2); border: 1px solid rgba(255, 191, 0, .35); border-radius: 8px; padding: clamp(24px, 4vw, 44px); }
+.caixa-preco .valor { font: 900 clamp(56px, 7vw, 84px)/1 var(--display); color: var(--papel); }
+.caixa-preco .valor small { font: 600 16px/1 var(--texto); color: var(--cinza); margin-left: 8px; }
+.caixa-preco .pix { display: inline-flex; gap: 8px; align-items: center; margin-top: 8px; font: 600 15px/1.3 var(--texto); color: #8FD19E; }
+.caixa-preco ul { list-style: none; margin: 18px 0 22px; padding: 0; display: grid; gap: 8px; color: #D9D1C1; font-size: 15px; }
+.caixa-preco li::before { content: "→ "; color: var(--ouro); }
+.caixa-preco .botao { height: 62px; font-size: 18px; padding: 0 32px; }
+
+/* quem está por trás */
+.bastidor { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: start; }
+.bastidor ol { margin: 0; padding: 0; list-style: none; counter-reset: e; display: grid; gap: 0; border-top: 1px solid var(--linha); }
+.bastidor li { counter-increment: e; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 12px; padding: 16px 0; border-bottom: 1px solid var(--linha); color: #D9D1C1; }
+.bastidor li::before { content: counter(e, decimal-leading-zero); font: 500 13px/1.6 var(--mono); color: var(--ouro); }
+.bastidor li b { color: var(--papel); }
+
+/* três vezes a mesma fila */
+.tres-vezes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border: 1px solid var(--linha); border-radius: 6px; overflow: hidden; }
+.tres-vezes div { padding: 26px; border-left: 1px solid var(--linha); display: grid; gap: 8px; align-content: start; background: var(--noir-2); }
+.tres-vezes div:first-child { border-left: 0; }
+.tres-vezes .ano { font: 900 44px/1 var(--display); color: var(--ouro); }
+.tres-vezes .tempo { font: 600 12px/1.3 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--papel); }
+.tres-vezes p { color: var(--cinza); font-size: 15px; }
+
+/* a pilha */
+.pilha-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.pilha-cards article { background: #FBF7EE; border: 1px solid var(--linha-papel); border-radius: 6px; padding: 24px; display: grid; gap: 10px; align-content: start; }
+.pilha-cards h3 { font-size: 22px; }
+.pilha-cards p { color: var(--tinta-2); font-size: 15px; }
+.pilha-cards .pag { font: 500 12px/1.3 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ouro-papel); }
+.pilha-cards article.destaque { grid-column: 1 / -1; background: var(--tinta); color: var(--papel); border-color: var(--tinta); }
+.pilha-cards article.destaque p { color: #D9D1C1; }
+.pilha-cards article.destaque .pag { color: var(--ouro); }
+
+/* citação do espectador */
+.voz { font: italic 700 clamp(24px, 3vw, 36px)/1.3 var(--display); color: var(--papel); border-left: 3px solid var(--ouro); padding-left: clamp(18px, 3vw, 32px); max-width: 30ch; }
+.voz-legenda { margin-top: 14px; font: 400 13px/1.5 var(--mono); color: var(--cinza); padding-left: clamp(21px, 3vw, 35px); }
+
+/* WhatsApp: atendido por gente (59% odeiam robô) */
+.whats { display: inline-flex; align-items: center; gap: 10px; height: 52px; padding: 0 20px; border-radius: 999px; text-decoration: none; font: 600 15px/1 var(--texto); color: var(--papel); border: 1px solid rgba(143, 209, 158, .5); }
+.whats::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: #8FD19E; box-shadow: 0 0 0 4px rgba(143, 209, 158, .18); }
+.whats:hover { border-color: #8FD19E; }
+
+/* a ficha desenhada (o que a pessoa recebe) */
+.ficha-papel { background: #FBF7EE; color: var(--tinta); border-radius: 4px; padding: 28px 26px 22px; box-shadow: 0 30px 60px -24px rgba(0, 0, 0, .7); transform: rotate(-1.6deg); max-width: 440px; }
+.ficha-papel .topo-ficha { display: flex; justify-content: space-between; font: 500 10px/1.3 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ouro-papel); border-bottom: 1px solid var(--linha-papel); padding-bottom: 10px; margin-bottom: 14px; }
+.ficha-papel h3 { font-size: 26px; margin-bottom: 14px; }
+.ficha-papel ol { margin: 0; padding: 0; list-style: none; counter-reset: f; }
+.ficha-papel li { counter-increment: f; display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 8px; padding: 10px 0; border-top: 1px solid var(--linha-papel); font: 700 15px/1.35 var(--display); }
+.ficha-papel li::before { content: counter(f, decimal-leading-zero); font: 900 18px/1.1 var(--display); color: var(--ouro-papel); }
+.ficha-papel li small { display: block; margin-top: 4px; font: 400 11px/1.4 var(--mono); color: var(--tinta-2); }
+.ficha-papel .rodape-ficha { margin-top: 12px; font: 500 10px/1.3 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--tinta-2); }
+
+/* barra fixa no celular (o botão nunca some) */
+.barra-fixa { display: none; }
+@media (max-width: 760px) {
+  .barra-fixa { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; display: flex; align-items: center; gap: 12px; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: rgba(20, 17, 13, .96); border-top: 1px solid rgba(255, 191, 0, .35); }
+  .barra-fixa div { display: grid; gap: 2px; min-width: 0; }
+  .barra-fixa b { font: 800 15px/1.2 var(--display); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .barra-fixa small { font: 500 11px/1.2 var(--mono); color: var(--cinza); }
+  .barra-fixa .botao { height: 46px; width: auto; margin-left: auto; padding: 0 18px; font-size: 15px; flex: none; }
+  .barra-fixa { transition: transform .3s ease; }
+  .barra-fixa.escondida { transform: translateY(110%); }
+  body.tem-barra { padding-bottom: 76px; }
+}
+
+@media (max-width: 960px) {
+  .pilha-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pilha-cards article.destaque { grid-column: 1 / -1; }
+  .nao-tem { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bastidor, .caixa-preco { grid-template-columns: minmax(0, 1fr); }
+  .caixa-preco .selo { justify-self: start; }
+}
+@media (max-width: 640px) {
+  .nao-tem, .pilha-cards, .tres-vezes { grid-template-columns: minmax(0, 1fr); }
+  .tres-vezes div { border-left: 0; border-top: 1px solid var(--linha); }
+  .tres-vezes div:first-child { border-top: 0; }
+  .selo { width: 170px; height: 170px; }
+  .selo b { font-size: 52px; }
+  .ficha-papel { transform: none; }
+}
+
+/* título longo da página de venda */
+.hero h1.h1-longo { font-size: clamp(38px, 5.2vw, 66px); }
+
+/* negrito do texto corrido (o **x** dos produtos) sobre o noir */
+.secao:not(.papel) p strong { color: var(--papel); }

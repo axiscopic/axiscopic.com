@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+# modo amostra: nada indexa ate o site.json dizer publicado

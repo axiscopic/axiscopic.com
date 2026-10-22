@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="ac" viewBox="-1.18 -1.18 2.36 2.36">
+    <circle r="1" fill="none" stroke="#FFBF00" stroke-width=".075"/>
+    <line x1="0" y1="-1.09" x2="0" y2="1.09" stroke="#FFBF00" stroke-width=".05"/>
+    <circle cy="-1.09" r=".06" fill="#FFBF00"/><circle cy="1.09" r=".06" fill="#FFBF00"/>
+    <g fill="#FFBF00">
+      <polygon points="0,-.95 .12,-.12 0,0 -.12,-.12"/>
+      <polygon points="0,-.95 .12,-.12 0,0 -.12,-.12" transform="rotate(90)"/>
+      <polygon points="0,-.95 .12,-.12 0,0 -.12,-.12" transform="rotate(180)"/>
+      <polygon points="0,-.95 .12,-.12 0,0 -.12,-.12" transform="rotate(270)"/>
+      <polygon points="0,-.548 .085,-.085 0,0 -.085,-.085" transform="rotate(45)" opacity=".85"/>
+      <polygon points="0,-.548 .085,-.085 0,0 -.085,-.085" transform="rotate(135)" opacity=".85"/>
+      <polygon points="0,-.548 .085,-.085 0,0 -.085,-.085" transform="rotate(225)" opacity=".85"/>
+      <polygon points="0,-.548 .085,-.085 0,0 -.085,-.085" transform="rotate(315)" opacity=".85"/>
+    </g>
+    <circle r=".207" fill="#14110D" stroke="#FFBF00" stroke-width=".05"/>
+    <circle r=".045" fill="#FFBF00"/>
+  </symbol>
+</svg>

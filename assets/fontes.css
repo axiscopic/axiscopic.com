@@ -1,0 +1,14 @@
+/* Fontes servidas pelo próprio site: nenhum pedido sai para o Google (o IP do visitante fica aqui).
+   Fontsource (jsDelivr) · Playfair Display e Inter 5.2.8 · IBM Plex Mono 5.2.7 · subconjunto latino · licença OFL em fontes/. */
+@font-face { font-family: "Playfair Display"; src: url("fontes/playfair-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Playfair Display"; src: url("fontes/playfair-800.woff2") format("woff2"); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: "Playfair Display"; src: url("fontes/playfair-900.woff2") format("woff2"); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Playfair Display"; src: url("fontes/playfair-700-italico.woff2") format("woff2"); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: "Playfair Display"; src: url("fontes/playfair-800-italico.woff2") format("woff2"); font-weight: 800; font-style: italic; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("fontes/inter-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("fontes/inter-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("fontes/inter-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("fontes/inter-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url("fontes/plexmono-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url("fontes/plexmono-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url("fontes/plexmono-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
