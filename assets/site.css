@@ -1,17 +1,19 @@
 /* AxisCopic · axiscopic.com — um arquivo de estilo para PT e EN (o gerador reaproveita).
    Mundo visual deliberado e único: a tela é noir (o canal) e o papel é o dossiê (o produto). */
 :root {
-  --noir: #14110D;
-  --noir-2: #1B1712;
-  --noir-3: #262019;
-  --ouro: #FFBF00;
+  /* 23/10 — REFINO aprovado (Daniel): a halação do creme 16:1 sobre quase-preto e do amarelo #FFBF00 grande.
+     Off-white ~14:1, fundo um tom acima, ouro mais perto do #C9A227 da MARCA.md. Medido na amostra lado a lado. */
+  --noir: #17130E;
+  --noir-2: #1E1913;
+  --noir-3: #29221A;
+  --ouro: #E2B33C;
   --ouro-claro: #E6C568;
   --ouro-papel: #7E5E00;   /* ouro legível sobre papel: 5,6:1 */
-  --papel: #F2ECDF;
+  --papel: #E9E2D4;
   --papel-2: #E7DECB;
   --tinta: #1E1A14;
   --tinta-2: #5A5143;
-  --cinza: #A99F8E;        /* neutro puxado para o ouro, 7,4:1 sobre noir */
+  --cinza: #BDB3A2;        /* neutro puxado para o ouro, 8,9:1 sobre noir (era 7,2:1) */
   --linha: rgba(242, 236, 223, .13);
   --linha-papel: rgba(30, 26, 20, .16);
   --display: "Playfair Display", Georgia, "Times New Roman", serif;
@@ -34,15 +36,15 @@ body {
 }
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
-h1, h2, h3 { font-family: var(--display); font-weight: 800; line-height: 1.08; margin: 0; text-wrap: balance; letter-spacing: -.01em; }
+h1, h2, h3 { font-family: var(--display); font-weight: 700; line-height: 1.08; margin: 0; text-wrap: balance; letter-spacing: -.01em; }
 p { margin: 0; }
 :focus-visible { outline: 2px solid var(--ouro); outline-offset: 3px; border-radius: 2px; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 .wrap { max-width: var(--larg); margin: 0 auto; padding: 0 var(--gutter); }
 .rotulo {
-  font: 500 12px/1.3 var(--mono);
-  letter-spacing: .14em;
+  font: 500 13px/1.3 var(--mono);
+  letter-spacing: .1em;
   text-transform: uppercase;
   color: var(--ouro);
 }
@@ -86,9 +88,9 @@ p { margin: 0; }
   pointer-events: none;
 }
 .hero .wrap { position: relative; display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
-.hero h1 { font-size: clamp(42px, 6.6vw, 84px); font-weight: 900; margin: 18px 0 24px; }
+.hero h1 { font-size: clamp(42px, 6.6vw, 84px); font-weight: 700; color: #E4DCCB; margin: 18px 0 24px; }
 .hero h1 em { font-style: italic; font-weight: 800; color: var(--ouro); }
-.hero .lead { font-size: clamp(18px, 1.7vw, 20px); color: #D9D1C1; max-width: 54ch; margin-bottom: 32px; }
+.hero .lead { font-size: clamp(18px, 1.7vw, 20px); color: #D2CABB; max-width: 54ch; margin-bottom: 32px; }
 
 .pasta { position: relative; aspect-ratio: 1 / 1.08; }
 .pasta figure { position: absolute; margin: 0; width: 72%; box-shadow: 0 30px 60px -20px rgba(0, 0, 0, .7), 0 0 0 1px rgba(0, 0, 0, .3); }
@@ -122,7 +124,7 @@ p { margin: 0; }
 .botao:active { transform: translateY(1px); }
 .botao.fantasma { background: transparent; color: var(--papel); border: 1px solid rgba(242, 236, 223, .3); }
 .botao.fantasma:hover { border-color: var(--papel); }
-.captura .micro { grid-column: 1 / -1; font-size: 14px; color: var(--cinza); }
+.captura .micro { grid-column: 1 / -1; font-size: 15px; color: var(--cinza); }
 .captura .retorno { grid-column: 1 / -1; font: 500 13px/1.5 var(--mono); color: var(--ouro-claro); min-height: 0; }
 .captura .retorno:empty { display: none; }
 .papel .captura input { background: #FFFDF8; color: var(--tinta); border-color: var(--linha-papel); }
@@ -134,7 +136,7 @@ p { margin: 0; }
 .numeros .wrap { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .numero { padding: clamp(28px, 4vw, 44px) clamp(16px, 2.6vw, 32px); border-left: 1px solid var(--linha); display: grid; gap: 10px; align-content: start; }
 .numero:first-child { border-left: 0; padding-left: 0; }
-.numero strong { font: 900 clamp(44px, 5vw, 64px)/1 var(--display); color: var(--ouro); font-variant-numeric: lining-nums; white-space: nowrap; }
+.numero strong { font: 800 clamp(44px, 5vw, 64px)/1 var(--display); color: var(--ouro); font-variant-numeric: lining-nums; white-space: nowrap; }
 .numero span { color: #D9D1C1; font-size: 16px; max-width: 30ch; }
 .numero cite { font: 400 12px/1.4 var(--mono); color: var(--cinza); font-style: normal; letter-spacing: .02em; }
 .numeros .moral { grid-column: 1 / -1; border-top: 1px solid var(--linha); padding: 22px 0; font: italic 600 clamp(19px, 2vw, 24px)/1.35 var(--display); color: var(--papel); }
@@ -185,7 +187,7 @@ p { margin: 0; }
 .dossie .captura .botao { width: 100%; }
 .dossie.data { display: grid; align-content: space-between; gap: 28px; padding: clamp(24px, 3vw, 36px); background:
   linear-gradient(180deg, rgba(255, 191, 0, .06), transparent 45%), var(--noir-2); }
-.dossie.data .dia { font: 900 clamp(48px, 5.6vw, 72px)/.95 var(--display); color: var(--papel); letter-spacing: -.02em; }
+.dossie.data .dia { font: 700 clamp(36px, 4vw, 50px)/.95 var(--display); color: var(--papel); letter-spacing: -.02em; }
 .dossie.data .dia small { display: block; font: 500 12px/1.3 var(--mono); letter-spacing: .14em; color: var(--ouro); margin-bottom: 14px; text-transform: uppercase; }
 .dossie.data p { color: #D9D1C1; }
 .dossie.data .nota { font: 400 13px/1.5 var(--mono); color: var(--cinza); }
@@ -203,15 +205,15 @@ p { margin: 0; }
 html[lang="en"] .evidencia cite::before { content: "Source · "; }
 
 /* ── os vídeos ─────────────────────────────────────────── */
-.videos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.videos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
 .video { text-decoration: none; display: grid; gap: 12px; }
 .video .quadro { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 4px; background: var(--noir-3); box-shadow: 0 0 0 1px var(--linha); }
 .video .quadro img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
 .video:hover .quadro img { transform: scale(1.04); }
 .video:hover .quadro { box-shadow: 0 0 0 2px var(--ouro); }
 .video:hover span { color: var(--ouro); }
-.video b { font: 700 18px/1.3 var(--display); }
-.video span { font: 400 12px/1.4 var(--mono); color: var(--cinza); letter-spacing: .04em; }
+.video b { font: 700 20px/1.3 var(--display); }
+.video span { font: 400 13px/1.4 var(--mono); color: var(--cinza); letter-spacing: .04em; }
 
 /* ── garantia e perguntas ──────────────────────────────── */
 .garantia .wrap { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: clamp(24px, 5vw, 64px); align-items: center; }
@@ -299,3 +301,7 @@ body.erro404 main{max-width:560px}
 body.erro404 h1{font-family:"Playfair Display",Georgia,serif;font-size:clamp(28px,6vw,44px);line-height:1.1;margin:8px 0 12px}
 body.erro404 .rot{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#FFBF00}
 body.erro404 a{color:#FFBF00}
+
+/* 23/10 — refino: a promessa do dossiê pesa mais que a data; o texto de apoio claro o bastante */
+.dossie.data p { font-size: 19px; color: var(--papel); }
+.numero span, .dossie .sub, .fatos li, .garantia p { color: #D2CABB; }
