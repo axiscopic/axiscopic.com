@@ -130,6 +130,21 @@ p { margin: 0; }
 .papel .captura input { background: #FFFDF8; color: var(--tinta); border-color: var(--linha-papel); }
 .papel .captura .micro { color: var(--tinta-2); }
 .papel .captura .retorno { color: var(--ouro-papel); }
+/* 23/10 — o envio responde na própria página: «enviando», depois o recado de confirmação no lugar do campo.
+   Preso a `form[data-lista]` (todo formulário do macro), nunca à classe visual: o PT é `.captura`/`.papel`, o EN é
+   `.campo`/`.memo` — _medido: a 1ª versão presa em `.captura` deixou o EN sem caixa e com o botão em «Sending…»_ */
+form[data-lista] .botao:disabled { opacity: .7; cursor: progress; }
+form[data-lista].enviado input, form[data-lista].enviado .botao, form[data-lista].enviado .lgpd { display: none; }
+form[data-lista] .retorno.ok {
+  grid-column: 1 / -1; display: grid; gap: 6px; padding: 16px 18px;
+  font: 400 15px/1.5 var(--texto); color: var(--cinza);
+  background: rgba(226, 179, 60, .08); border: 1px solid var(--ouro); border-radius: 4px;
+}
+form[data-lista] .retorno.ok strong { font: 600 17px/1.45 var(--texto); color: var(--papel); }
+form[data-lista] .retorno.ok strong::before { content: "✓  "; color: var(--ouro); }
+.papel form[data-lista] .retorno.ok, .memo form[data-lista] .retorno.ok { background: #FFFDF8; border-color: var(--ouro-papel); color: var(--tinta-2); }
+.papel form[data-lista] .retorno.ok strong, .memo form[data-lista] .retorno.ok strong { color: var(--tinta); }
+.papel form[data-lista] .retorno.ok strong::before, .memo form[data-lista] .retorno.ok strong::before { color: var(--ouro-papel); }
 
 /* ── faixa dos números ─────────────────────────────────── */
 .numeros { border-top: 1px solid var(--linha); border-bottom: 1px solid var(--linha); background: var(--noir-2); }
